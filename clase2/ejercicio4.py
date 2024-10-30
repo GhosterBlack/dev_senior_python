@@ -32,7 +32,7 @@ if eleccion == "5":
     precio = article5
 
 if eleccion == "6":
-    precio = input("Dijite el precio de lo que compro")
+    precio = input("Dijite el precio de lo que compro: ")
     if not precio.isnumeric():
         print("Dijitacion incorrecta, ¡Adios!")
         canContinue = False

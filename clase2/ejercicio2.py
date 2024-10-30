@@ -8,11 +8,11 @@
 # Tenga en cuenta que no los hago mas complejos por lucirme o por hacer mas de lo que me piden, sino que ya he hecho estos
 # ejercicios varias veces y tomo esto como una oportunidad de practicar mi logica con pocos recursos.
 
-pedirEdad = input("Por favor digite su edad")
+pedirEdad = input("Por favor digite su edad: ")
 puedeContinuar = True
 
 if not (pedirEdad.isnumeric()):
-    pedirEdad = input("Por favor digite un numero correcto")
+    pedirEdad = input("Por favor digite un numero correcto: ")
 
 if not pedirEdad.isnumeric():
     print("No has digitado una edad correcta")
@@ -21,7 +21,7 @@ if not pedirEdad.isnumeric():
 if puedeContinuar:
     edad = int(pedirEdad)
     puedeVotar = False
-    pais = input("Escriba su pais de residencia")
+    pais = input("Escriba su pais de residencia: ")
     para16 = "Argentina argentina ARGENTINA Brasil brasil BRASIL Ecuador ecuador ECUADOR Malta malta MALTA Nicaragua nicaragua NICARAGUA"
     para17 = "Grecia grecia GRECIA Indonesia indonesia INDONESIA"
     if edad >= 18 or (pais in para16 and edad >= 16) or (pais in para17 and edad >= 17):

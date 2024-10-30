@@ -4,7 +4,7 @@
 
 # Creado por Ivan TG. Profe este no lo voy a complicar por que ya es complicado XD
 
-anio = input("Escriba un año")
+anio = input("Escriba un año ")
 if anio.isnumeric():
     anio = int(anio)
     if (anio % 4 == 0) and (anio % 100 != 0 or anio % 400 == 0):

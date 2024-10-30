@@ -8,7 +8,7 @@
 print("Habian tres niños, manuelito, pedrito y juancito, los tres querian saber quien pesaba mas por lo que se fueron a pesar \n\
 cuando se terminaron de pesar, pedrito le pregunto a manuelito cuanto pesaba.")
 canContinue = True
-manuelito = input("Cuanto peso manuelito?")
+manuelito = input("Cuanto peso manuelito? ")
 whoishardest = 0
 if not manuelito.isnumeric():
     print(f"Manuelito respondio: {manuelito} \n y Pedrito le dijo: Manuelito eres muy raro, Y se fueron a sus casas")
@@ -17,7 +17,7 @@ if not manuelito.isnumeric():
 if canContinue:
     print(f"Manuelito entonces dijo: peso {manuelito}kg, ¿tu cuanto pesaste?")
     manuelito = int(manuelito)
-    pedrito = input("¿Cuanto peso Pedrito?")
+    pedrito = input("¿Cuanto peso Pedrito? ")
     if not pedrito.isnumeric():
         print("Pedrito respondio: Eso que te importa... Y se fue a su casa")
         canContinue = False
@@ -30,7 +30,7 @@ if canContinue:
     else:
         print(f"Pedrito dijo: Estas gordisimo, Manuelito, no como yo que peso {pedrito} ¿y tu Juancito?")
         whoishardest = 1
-    juancito = input("Cuanto pesa juancito?")
+    juancito = input("Cuanto pesa juancito? ")
     if not juancito.isnumeric():
         print("Pedrito le dijo: Sabes que? no me importa... Y pedrito se fue")
         canContinue = True
