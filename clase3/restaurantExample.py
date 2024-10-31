@@ -16,6 +16,10 @@ digitarPlato = True
 
 print("#############################################")
 
+print("Iniciando programa, por favor digite los platos del menu de hoy")
+
+print("-------------------------------------------")
+
 while digitarPlato and cantidadPlatos < 5:
     print("Digite el nombre del plato y el precio")
     # Primero almacenamos en variables temporales los nombres de los platos
@@ -76,6 +80,14 @@ while not terminar:
     while not numeroDePersonas.isnumeric():
         numeroDePersonas = input("Escriba un numero correcto: ")
     numeroDePersonas = int(numeroDePersonas)
+
+    # Preguntamos si es para llevar
+    print("¿La orden sera para llevar? \n 1) Si \n 2) No")
+    paraLlevar = input("Respuesta: ")
+    if paraLlevar == "1" or paraLlevar == "Si" or paraLlevar == "si" or paraLlevar == "SI":
+        paraLlevar = True
+    else:
+        paraLlevar = False
     for i in range(numeroDePersonas):
         print("¿Que va a ordenar?")
         print(f"1) {nombrePlato1} ...... valor: {precioPlato1}$")
@@ -104,7 +116,17 @@ while not terminar:
         elif response == "5":
             factura += f"\n {nombrePlato5} ...... valor: {precioPlato5}$"
             montoTotal += precioPlato5
-    factura += f"\n Total a pagar: {montoTotal} \n ----------------------------"
+    if paraLlevar:
+        direccion = input("Por favor digite su direccion: ")
+        direccion = direccion.lower()
+        while not ("cll" in direccion or "cr" in direccion or "#" in direccion or "calle" in direccion or "carrera" in direccion):
+            direccion = input("Escriba una direccion correcta por favor: ")
+            direccion = direccion.lower()
+        nombre = input("¿Por quien preguntamos?: ")
+        while nombre == "" or nombre == " ":
+            nombre = input("Por favor escriba un nombre: ")
+        factura += f"\n \n Cliente: {nombre}. \n direccion: {direccion}."
+    factura += f"\n Total a pagar: {montoTotal} \n----------------------------"
     print(factura)
     gananciaTotal += montoTotal
 
