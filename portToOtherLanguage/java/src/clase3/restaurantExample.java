@@ -81,11 +81,11 @@ public class restaurantExample {
             System.out.println("Mesa numero "+(cantidadMesasAtendidas+1)+" ¿Cuantas ordenes va a pedir?");
             int numeroPersonas = inputInt("Cantidad de ordenes: ");
             System.out.println("¿La orden sera para llevar? \n 1) Si \n 2) No");
-            String responseLlevar = inputText("Respuesta: ");
+            int responseLlevar = inputInt("Respuesta (solo en numero): ");
             boolean paraLlevar = false;
             boolean isPosibleResponse = false;
 
-            if ("1".equals(responseLlevar) || "si".equals(responseLlevar) || "Si".equals(responseLlevar) || "SI".equals(responseLlevar)) {
+            if (responseLlevar == 1) {
                 paraLlevar = true;
             }
 
@@ -130,7 +130,7 @@ public class restaurantExample {
 
             if (paraLlevar) {
                 String direccion = inputText("Escriba su direccion: ");
-                String nombre = inputText("Escriba su nombre");
+                String nombre = inputText("Escriba su nombre: ");
                 factura += "\n \n Cliente: "+nombre+" \n Direccion: "+direccion;
             }
             factura += "\n Total a pagar: "+montoTotal+" \n------------------------------------";
