@@ -5,11 +5,25 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "restaurantExample",
+            "request": "launch",
+            "mainClass": "clase3.restaurantExample",
+            "projectName": "dev_senior_python_a04d498c"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "dev_senior_python_a04d498c"
+        },
+        {
             "name": "Python Debugger: Current File",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
-        },
+        }
     ]
 }

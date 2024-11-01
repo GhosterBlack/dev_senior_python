@@ -100,7 +100,7 @@ while not terminar:
         if nombrePlato5 != "":
             print(f"5) {nombrePlato5} ...... valor: {precioPlato5}$")
 
-        response = input("Respuesta: ")
+        response = input("Eleccion: ")
         if response == "1":
             factura += f"\n {nombrePlato1} ...... valor: {precioPlato1}$"
             montoTotal += precioPlato1
