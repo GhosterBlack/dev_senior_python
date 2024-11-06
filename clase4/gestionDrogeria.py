@@ -26,7 +26,7 @@ while not terminarPrograma:
             print(numeroNegativo)
             cantidad *= -1
         for i in range(cantidad):
-            print(f"Datos del producto {i+1}")
+            print(f"Datos del producto {i+1} (Si este producto ya esta en stock ingrese 0 para asignar el mismo valor)")
             nombre = input("Ingrese el nombre del producto: ")
             precio = float(input("Ingrese el precio del producto: "))
             unidad = int(input("Ingrese las cantidades de este producto: "))
@@ -43,7 +43,8 @@ while not terminarPrograma:
             if nombre in nombres:
                 index = nombres.index(nombre)
                 unidades[index] += unidad
-                precios[index] = precio
+                if precio > 0:
+                    precios[index] = precio
             else:
                 nombres.append(nombre)
                 precios.append(precio)
